@@ -1,0 +1,70 @@
+---
+// Footer.astro
+---
+
+<footer class="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 text-white py-12 px-6 border-t-4 border-lime-400">
+  <div class="absolute inset-0 bg-[#8a2be2] opacity-20 glitch-bg"></div>
+  
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold mb-2 text-lime-300 glitch-text" style="text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32">
+          Eccentric Glitch Chronicles
+        </h2>
+        <p class="text-purple-200">
+          &copy; {new Date().getFullYear()} All rights reserved
+        </p>
+      </div>
+      
+      <div class="flex space-x-6">
+        <a href="https://twitter.com" target="_blank" rel="noopener" 
+           class="text-lime-300 hover:text-white transform hover:scale-125 transition-all duration-300 hover:animate-pulse">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" 
+           class="text-lime-300 hover:text-white transform hover:scale-125 transition-all duration-300 hover:animate-pulse">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener" 
+           class="text-lime-300 hover:text-white transform hover:scale-125 transition-all duration-300 hover:animate-pulse">
+          <i class="fab fa-discord text-2xl"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener" 
+           class="text-lime-300 hover:text-white transform hover:scale-125 transition-all duration-300 hover:animate-pulse">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="mt-10 pt-6 border-t border-purple-700 text-center">
+      <p class="text-purple-300">
+        Powered by <span class="text-lime-300 font-bold">Psychedelic Futurism</span> & Cosmic Energy
+      </p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 3px); }
+      40% { transform: translate(-3px, -3px); }
+      60% { transform: translate(3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+      100% { transform: translate(0); }
+    }
+    
+    .glitch-text {
+      animation: glitch 0.3s infinite;
+    }
+    
+    .glitch-bg {
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(50, 205, 50, 0.1) 10px,
+        rgba(50, 205, 50, 0.1) 20px
+      );
+    }
+  </style>
+</footer>

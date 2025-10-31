@@ -1,0 +1,220 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Eccentric Glitch Chronicles - Home" description="Embark on a psychedelic journey through the weird and wonderful world of human eccentricity. Discover glitchy tales infused with humor, futurism, and vibrant contrasts that will warp your reality.">
+  <!-- Glitch Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-[#8a2be2] via-[#4b0082] to-[#32cd32] py-28 md:py-40">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-1/4 w-1/3 h-1 bg-[#32cd32] animate-pulse"></div>
+      <div class="absolute top-1/3 right-1/4 w-1/4 h-1 bg-[#8a2be2] animate-ping"></div>
+      <div class="absolute bottom-1/4 left-1/3 w-1/5 h-1 bg-[#32cd32] animate-pulse"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <div class="glitch-wrapper mb-6">
+        <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter relative">
+          <span class="relative z-10">ECCENTRIC GLITCH</span>
+          <span class="absolute top-0 left-0 text-[#32cd32] transform -translate-x-1 -translate-y-1 opacity-80">ECCENTRIC GLITCH</span>
+          <span class="absolute top-0 left-0 text-[#ff00ff] transform translate-x-1 translate-y-1 opacity-80">ECCENTRIC GLITCH</span>
+        </h1>
+        <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter relative">
+          <span class="relative z-10">CHRONICLES</span>
+          <span class="absolute top-0 left-0 text-[#32cd32] transform -translate-x-1 -translate-y-1 opacity-80">CHRONICLES</span>
+          <span class="absolute top-0 left-0 text-[#ff00ff] transform translate-x-1 translate-y-1 opacity-80">CHRONICLES</span>
+        </h1>
+      </div>
+      
+      <div class="max-w-2xl mx-auto mt-8">
+        <p class="text-xl md:text-2xl text-white font-bold bg-black bg-opacity-30 py-3 px-6 inline-block transform rotate-1">
+          Unveiling the bizarre tales of human eccentricity with humor and flair
+        </p>
+      </div>
+      
+      <div class="mt-12 flex flex-wrap justify-center gap-4">
+        <button class="glow-button px-8 py-4 bg-[#32cd32] text-black font-bold text-lg rounded-none transform hover:scale-105 transition-all duration-300 border-2 border-white">
+          EXPLORE THE GLITCH
+        </button>
+        <button class="glow-button px-8 py-4 bg-transparent text-white font-bold text-lg rounded-none border-2 border-[#32cd32] hover:bg-[#32cd32] hover:text-black transition-all duration-300">
+          SUBSCRIBE TO CHAOS
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section with Glitch Cards -->
+  <section class="py-20 bg-black relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="grid grid-cols-12 gap-4">
+        {[...Array(24)].map((_, i) => (
+          <div key={i} class="h-12 border border-[#8a2be2]"></div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="glitch-card p-8 bg-gradient-to-br from-[#8a2be2] to-[#4b0082] border-2 border-[#32cd32] transform hover:rotate-1 transition-transform duration-300">
+          <h2 class="text-3xl font-bold text-white mb-6 relative">
+            <span class="relative z-10">WELCOME TO THE FOLD</span>
+            <span class="absolute top-0 left-0 text-[#32cd32] transform -translate-x-1 -translate-y-1 opacity-50">WELCOME TO THE FOLD</span>
+          </h2>
+          <p class="text-white text-lg leading-relaxed">
+            Welcome to <span class="font-bold text-[#32cd32]">Eccentric Glitch Chronicles</span>, where the boundaries of normalcy shatter like pixels in a digital storm. 
+            In this psychedelic futurism haven, we dive deep into the quirks, oddities, and mind-bending stories that make humanity gloriously unpredictable.
+          </p>
+        </div>
+        
+        <div class="glitch-card p-8 bg-gradient-to-br from-[#32cd32] to-[#228b22] border-2 border-[#8a2be2] transform hover:-rotate-1 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-black mb-4">IMAGINE A WORLD...</h3>
+          <p class="text-black text-lg leading-relaxed">
+            Imagine a world where inventors build time-traveling toasters, artists paint with quantum ink, 
+            and everyday mishaps explode into cosmic comedies. Our glitch effects and vibrant contrasts bring these tales to life, 
+            glitching your screen and your sanity in the best way possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Dive Section with Animated Grid -->
+  <section class="py-20 bg-gradient-to-r from-[#1a1a2e] to-[#16213e]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4 relative inline-block">
+          <span class="relative z-10">WHY DIVE INTO THE GLITCH?</span>
+          <span class="absolute top-0 left-0 text-[#32cd32] transform -translate-x-1 -translate-y-1 opacity-50">WHY DIVE INTO THE GLITCH?</span>
+        </h2>
+        <div class="w-24 h-1 bg-[#32cd32] mx-auto mt-4"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glitch-border p-8 bg-black border-2 border-[#8a2be2] hover:border-[#32cd32] transition-colors duration-300">
+          <div class="text-5xl text-[#32cd32] mb-6">
+            <i class="fas fa-laugh-beam"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">HUMOR IN THE CHAOS</h3>
+          <p class="text-gray-300">
+            Laugh at the absurdities that define us. Our tales transform everyday eccentricities into comedic gold with a futuristic twist.
+          </p>
+        </div>
+        
+        <div class="glitch-border p-8 bg-black border-2 border-[#32cd32] hover:border-[#8a2be2] transition-colors duration-300">
+          <div class="text-5xl text-[#8a2be2] mb-6">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">FUTURISTIC FLAIR</h3>
+          <p class="text-gray-300">
+            Stories laced with neon dreams and technological wonder. Each tale is a journey through tomorrow's possibilities today.
+          </p>
+        </div>
+        
+        <div class="glitch-border p-8 bg-black border-2 border-[#8a2be2] hover:border-[#32cd32] transition-colors duration-300">
+          <div class="text-5xl text-[#32cd32] mb-6">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">VISUAL STIMULATION</h3>
+          <p class="text-gray-300">
+            Our psychedelic design warps reality with glitch effects and vibrant contrasts that challenge your perception of normalcy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Stories Preview -->
+  <section class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4 relative inline-block">
+          <span class="relative z-10">FEATURED GLITCH TALES</span>
+          <span class="absolute top-0 left-0 text-[#32cd32] transform -translate-x-1 -translate-y-1 opacity-50">FEATURED GLITCH TALES</span>
+        </h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          A glimpse into the mind-bending stories that await in our archives
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[1, 2, 3].map((item) => (
+          <div key={item} class="glitch-card bg-gradient-to-b from-[#2c024d] to-[#1a002e] border border-[#8a2be2] p-6 transform hover:scale-105 transition-all duration-300">
+            <div class="mb-4">
+              <span class="inline-block px-3 py-1 bg-[#32cd32] text-black text-sm font-bold">STORY #{item}</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">The Quantum Barber</h3>
+            <p class="text-gray-300 mb-4">
+              A hairdresser who cuts through dimensions discovers clients from parallel universes requesting impossible styles.
+            </p>
+            <button class="text-[#32cd32] font-bold flex items-center group">
+              READ THE TALE
+              <span class="ml-2 group-hover:ml-4 transition-all duration-300">→</span>
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-r from-[#8a2be2] via-[#4b0082] to-[#32cd32] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 left-0 w-full h-1 bg-white animate-pulse"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-white animate-pulse"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        EMBRACE THE ECCENTRICITY
+      </h2>
+      <p class="text-xl text-white max-w-2xl mx-auto mb-10">
+        Join our glitch-obsessed community and never miss another weird tale from the edge of normalcy
+      </p>
+      
+      <div class="max-w-md mx-auto flex">
+        <input 
+          type="email" 
+          placeholder="YOUR EMAIL FOR CHAOS" 
+          class="flex-grow px-6 py-4 text-black font-bold focus:outline-none"
+        />
+        <button class="px-8 py-4 bg-black text-white font-bold hover:bg-[#32cd32] hover:text-black transition-colors duration-300">
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+  
+  .glitch-wrapper {
+    animation: glitch 3s infinite;
+  }
+  
+  .glitch-card {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+  }
+  
+  .glitch-border:hover {
+    box-shadow: 0 0 20px rgba(50, 205, 50, 0.7);
+  }
+  
+  .glow-button {
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.7);
+  }
+  
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .glitch-wrapper {
+      animation: none;
+    }
+  }
+</style>

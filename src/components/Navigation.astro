@@ -1,0 +1,102 @@
+---
+// Navigation component for Eccentric Glitch Chronicles
+---
+
+<nav class="bg-gradient-to-r from-purple-600 to-green-500 shadow-lg border-b-4 border-purple-900">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <!-- Site Logo/Name -->
+      <a href="/" class="text-2xl md:text-3xl font-bold text-white glitch-text tracking-wider flex items-center">
+        <i class="fas fa-infinity mr-2 text-yellow-300"></i>
+        Eccentric Glitch Chronicles
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex gap-1 lg:gap-4 items-center">
+        <a href="/" class="px-3 py-2 text-white font-bold hover:bg-purple-800 rounded-lg transition-all transform hover:scale-105 border-2 border-transparent hover:border-green-300 shadow-md hover:shadow-lg">
+          <i class="fas fa-home mr-1"></i> Home
+        </a>
+        <a href="/stories" class="px-3 py-2 text-white font-bold hover:bg-purple-800 rounded-lg transition-all transform hover:scale-105 border-2 border-transparent hover:border-green-300 shadow-md hover:shadow-lg">
+          <i class="fas fa-book-open mr-1"></i> Stories
+        </a>
+        <a href="/gallery" class="px-3 py-2 text-white font-bold hover:bg-purple-800 rounded-lg transition-all transform hover:scale-105 border-2 border-transparent hover:border-green-300 shadow-md hover:shadow-lg">
+          <i class="fas fa-images mr-1"></i> Gallery
+        </a>
+        <a href="/about" class="px-3 py-2 text-white font-bold hover:bg-purple-800 rounded-lg transition-all transform hover:scale-105 border-2 border-transparent hover:border-green-300 shadow-md hover:shadow-lg">
+          <i class="fas fa-user-astronaut mr-1"></i> About
+        </a>
+        <a href="/blog" class="px-3 py-2 text-white font-bold hover:bg-purple-800 rounded-lg transition-all transform hover:scale-105 border-2 border-transparent hover:border-green-300 shadow-md hover:shadow-lg">
+          <i class="fas fa-blog mr-1"></i> Blog
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white text-2xl p-2 rounded-lg hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-white">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 bg-purple-900 bg-opacity-90 rounded-lg border-2 border-green-400">
+      <div class="flex flex-col gap-2 p-4">
+        <a href="/" class="px-4 py-3 text-white font-bold hover:bg-purple-700 rounded-lg flex items-center border-b border-purple-600">
+          <i class="fas fa-home mr-3"></i> Home
+        </a>
+        <a href="/stories" class="px-4 py-3 text-white font-bold hover:bg-purple-700 rounded-lg flex items-center border-b border-purple-600">
+          <i class="fas fa-book-open mr-3"></i> Stories
+        </a>
+        <a href="/gallery" class="px-4 py-3 text-white font-bold hover:bg-purple-700 rounded-lg flex items-center border-b border-purple-600">
+          <i class="fas fa-images mr-3"></i> Gallery
+        </a>
+        <a href="/about" class="px-4 py-3 text-white font-bold hover:bg-purple-700 rounded-lg flex items-center border-b border-purple-600">
+          <i class="fas fa-user-astronaut mr-3"></i> About
+        </a>
+        <a href="/blog" class="px-4 py-3 text-white font-bold hover:bg-purple-700 rounded-lg flex items-center">
+          <i class="fas fa-blog mr-3"></i> Blog
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Font Awesome and Mobile Menu Script -->
+<script is:client>
+  {`
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  `}
+</script>
+
+<style>
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+  }
+
+  .glitch-text:hover {
+    animation: glitch 0.3s linear infinite;
+    text-shadow: 
+      2px 0 0 #32cd32,
+      -2px 0 0 #8a2be2;
+  }
+
+  @media (min-width: 768px) {
+    .glitch-text:hover {
+      animation: glitch 0.5s linear infinite;
+    }
+  }
+</style>
